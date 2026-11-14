@@ -2,22 +2,39 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Live AI Office — tableau de bord de sécurité intelligent, local et privé</title>
 <meta name="description" content="Live AI Office transforme les caméras d&#x27;un bureau en tableau de bord de sécurité intelligent pour le personnel : présence, retards, feuilles de temps, alertes. Tout reste sur place.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b1220">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://bayhaj1.github.io/live-ai-office-site/">
+<link rel="alternate" hreflang="fr" href="https://bayhaj1.github.io/live-ai-office-site/">
+<link rel="alternate" hreflang="en" href="https://bayhaj1.github.io/live-ai-office-site/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Live AI Office">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://bayhaj1.github.io/live-ai-office-site/">
 <meta property="og:title" content="Live AI Office — tableau de bord de sécurité intelligent, local et privé">
 <meta property="og:description" content="Live AI Office transforme les caméras d&#x27;un bureau en tableau de bord de sécurité intelligent pour le personnel : présence, retards, feuilles de temps, alertes. Tout reste sur place.">
-<meta property="og:image" content="img/hero.webp">
-<link rel="alternate" hreflang="en" href="en/">
+<meta property="og:image" content="https://bayhaj1.github.io/live-ai-office-site/img/og-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Live AI Office : l&#x27;IA locale qui veille sur votre bureau">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Live AI Office — tableau de bord de sécurité intelligent, local et privé">
+<meta name="twitter:description" content="Live AI Office transforme les caméras d&#x27;un bureau en tableau de bord de sécurité intelligent pour le personnel : présence, retards, feuilles de temps, alertes. Tout reste sur place.">
+<meta name="twitter:image" content="https://bayhaj1.github.io/live-ai-office-site/img/og-fr.jpg">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/hero.webp">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" as="image" href="img/hero-1344.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1344.webp 1344w" imagesizes="100vw" fetchpriority="high">
 <style>:root{--ink:#0e1726;--muted:#4a5568;--blue:#2b59c3;--blue2:#5b8cff;--bg:#f7f8fc;--card:#fff;--line:#e3e7f0;--dark:#0b1220;--r:20px;
 font-family:"Inter","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;line-height:1.6;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;overflow-x:clip;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}a{color:var(--blue)}
-.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:14px clamp(16px,4vw,48px);
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:12px max(clamp(16px,4vw,48px),env(safe-area-inset-right)) 12px max(clamp(16px,4vw,48px),env(safe-area-inset-left));
 background:rgba(247,248,252,.78);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgba(14,23,38,.06)}
 .brand{font-weight:750;letter-spacing:-.02em;text-decoration:none;color:var(--ink);display:flex;gap:10px;align-items:center;font-size:1.05rem}
 .mark{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-size:.9rem}
@@ -69,9 +86,6 @@ h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted
 .shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(14,23,38,.16);background:#fff}
 .feature .num{color:var(--blue);font-weight:800;font-size:.9rem;letter-spacing:.1em}.feature h3{font-size:1.5rem;margin:6px 0 8px}
 .feature p{color:var(--muted);margin:0}
-.mobile{display:flex;align-items:center;gap:28px;justify-content:center;margin-top:40px}
-.mobile img{width:240px;border-radius:28px;border:8px solid var(--ink);box-shadow:0 30px 70px rgba(14,23,38,.25)}
-.mobile figcaption{font-weight:650;font-size:1.2rem}
 .tint{max-width:none;background:linear-gradient(180deg,#eef2fb,#f7f8fc)}.tint>*{max-width:1104px;margin-left:auto;margin-right:auto}
 .road{list-style:none;padding:0;margin:36px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
 .step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px 18px}
@@ -86,18 +100,112 @@ h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted
 @keyframes flow{to{stroke-dashoffset:-36}}
 @keyframes reveal{from{opacity:0;transform:translateY(34px) scale(.985)}to{opacity:1;transform:none}}
 @supports (animation-timeline: view()){.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 28%}}
-@media (max-width:900px){.links{display:none}.toggle{margin-left:auto}.stats{grid-template-columns:1fr 1fr}.split,.split2,.feature,.feature.flip{grid-template-columns:1fr}
-.feature.flip .shot{order:0}.cards.three{grid-template-columns:1fr}.points{grid-template-columns:1fr}.road{grid-template-columns:1fr}.mobile{flex-direction:column}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.brand{min-height:44px}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;font-weight:650;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--blue2);outline-offset:3px;border-radius:8px}
+.toggle a{min-height:44px;min-width:44px;justify-content:center;display:inline-flex;align-items:center}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:650;font-size:.92rem}
+.menu summary::-webkit-details-marker{display:none}
+.burger,.burger::before,.burger::after{display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.burger{position:relative}
+.burger::before,.burger::after{content:"";position:absolute;left:0}
+.burger::before{top:-6px}
+.burger::after{top:6px}
+.menu[open] .burger{background:transparent}
+.menu[open] .burger::before{transform:translateY(6px) rotate(45deg)}
+.menu[open] .burger::after{transform:translateY(-6px) rotate(-45deg)}
+.menu nav{position:absolute;right:0;top:calc(100% + 10px);width:min(280px,calc(100vw - 32px));background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(14,23,38,.18);padding:8px;display:grid}
+.menu nav a{display:flex;align-items:center;min-height:48px;padding:0 14px;border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600}
+.menu nav a:active,.menu nav a:hover{background:#eef2fb}
+.arch-list{display:none}
+.mobile-head{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ticks li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px 12px 44px;position:relative;font-weight:600}
+.ticks li::before{content:"✓";position:absolute;left:16px;color:var(--blue);font-weight:800}
+.phones{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,3vw,36px);margin-top:44px}
+.phone{margin:0;text-align:center}
+.phone img{width:100%;max-width:260px;margin:0 auto;border-radius:34px;border:7px solid #0e1726;box-shadow:0 30px 60px rgba(14,23,38,.22);background:#0e1726}
+.phone figcaption{margin-top:14px;font-weight:650}
+@media (max-width:900px){
+.links{display:none}
+.toggle{margin-left:auto}
+.menu{display:block}
+.bar{gap:10px}
+.stats{grid-template-columns:1fr 1fr}
+.split,.split2,.feature,.feature.flip,.mobile-head{grid-template-columns:1fr}
+.split,.split2{gap:28px}
+.feature{gap:22px;margin:44px 0}
+.feature.flip .shot{order:0}
+.cards.three{grid-template-columns:1fr 1fr}
+.points{grid-template-columns:1fr}
+.road{grid-template-columns:1fr}
+.phones{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+.arch{display:none}
+.arch-wrap{padding:14px}
+.arch-list{display:grid;gap:0;list-style:none;margin:0;padding:0;justify-items:center;text-align:center}
+.arch-list .node{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px;font-weight:650;color:#fff;display:grid;gap:8px}
+.arch-list .node span{font-weight:500;color:#dfe7ff;background:rgba(91,140,255,.16);border-radius:10px;padding:8px 10px;font-size:.92rem}
+.arch-list .node:first-child span{background:none;color:#8fb0ff;padding:0;font-size:.85rem}
+.arch-list .main{border-color:#5b8cff;background:rgba(91,140,255,.10)}
+.arch-list .main .ok{background:rgba(64,200,140,.18)}
+.arch-list .node+.node::before{content:"";display:block;width:3px;height:22px;margin:-37px auto 0;background:repeating-linear-gradient(#5b8cff 0 6px,transparent 6px 11px)}
+.arch-list .node+.node{margin-top:24px;padding-top:14px}
+.arch-list .nocloud{margin-top:14px;color:#ff9d9d;font-weight:650}
+}
+@media (max-width:600px){
+body{font-size:1.02rem}
+.brand{font-size:1rem}
+.mark{width:30px;height:30px}
+.menu-label{display:none}
+.menu summary{padding:0 12px}
+.hero{min-height:min(92svh,760px)}
+.hero-img img{object-position:62% center}
+.hero::after{background:linear-gradient(180deg,rgba(11,18,32,.1) 0%,rgba(11,18,32,.6) 30%,rgba(11,18,32,.94) 62%)}
+.hero-text{padding:0 max(20px,env(safe-area-inset-left)) 72px}
+h1{font-size:clamp(2.05rem,9.4vw,2.6rem);letter-spacing:-.03em}
+.lead{font-size:1rem}
+.ctas{flex-direction:column}
+.btn{width:100%}
+.stats{margin-top:-32px;gap:10px}
+.stats li{padding:16px}
+.stats strong{font-size:1.3rem}
+.stats span{font-size:.85rem;line-height:1.4;display:block}
+.sec{padding:64px max(18px,env(safe-area-inset-left)) 64px max(18px,env(safe-area-inset-right))}
+h2{font-size:clamp(1.6rem,7vw,2rem)}
+.sub{font-size:1rem}
+.side{border-radius:20px}
+.cards.three{grid-template-columns:1fr}
+.shot{max-width:280px;margin:0 auto;border-radius:30px;border:7px solid #0e1726;background:#0e1726}
+.feature h3{font-size:1.3rem}
+.feature figcaption{text-align:center}
+.phones{gap:14px 12px}
+.phone img{border-radius:24px;border-width:5px}
+.phone figcaption{font-size:.9rem}
+.card:hover,.btn:hover{transform:none}
+.foot{padding-bottom:max(40px,env(safe-area-inset-bottom))}
+.who{font-size:1.02rem;line-height:1.9}
+.who .mail{display:inline-flex;min-height:44px;align-items:center}
+}
 </style>
 </head>
 <body>
-<header class="bar"><a class="brand" href="#top"><span class="mark">◉</span>Live AI Office</a>
-<nav class="links"><a href="#probleme">Problème</a><a href="#fonctionnement">Fonctionnement</a><a href="#fonctionnalites">Fonctionnalités</a><a href="#impact">Impact</a><a href="#feuille-de-route">Feuille de route</a><a href="#contact">Contact</a></nav>
-<span class="toggle"><a aria-current="true">FR</a><a href="en/" hreflang="en">EN</a></span></header>
-<main id="top">
+<a class="skip" href="#top">Aller au contenu</a>
+<header class="bar"><a class="brand" href="#top"><span class="mark" aria-hidden="true">◉</span>Live AI Office</a>
+<nav class="links" aria-label="Menu"><a href="#probleme">Problème</a><a href="#fonctionnement">Fonctionnement</a><a href="#fonctionnalites">Fonctionnalités</a><a href="#mobile">Mobile</a><a href="#impact">Impact</a><a href="#feuille-de-route">Feuille de route</a><a href="#contact">Contact</a></nav>
+<span class="toggle" role="group" aria-label="Langue"><a aria-current="true" lang="fr">FR</a><a href="en/" hreflang="en" lang="en">EN</a></span>
+<details class="menu"><summary aria-label="Menu"><span class="burger" aria-hidden="true"></span><span class="menu-label">Menu</span></summary>
+<nav aria-label="Menu"><a href="#probleme">Problème</a><a href="#fonctionnement">Fonctionnement</a><a href="#fonctionnalites">Fonctionnalités</a><a href="#mobile">Mobile</a><a href="#impact">Impact</a><a href="#feuille-de-route">Feuille de route</a><a href="#contact">Contact</a></nav></details></header>
+<main id="top" tabindex="-1">
 <section class="hero">
-  <div class="hero-img"><img src="img/hero.webp" alt="" width="1344" height="752" fetchpriority="high"></div>
+  <div class="hero-img"><img src="img/hero-1344.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1344.webp 1344w" sizes="100vw" alt="" width="1344" height="752" fetchpriority="high"></div>
   <div class="hero-text">
     <p class="eyebrow">Intelligence de sécurité · conçu au Burundi</p>
     <h1>L&#x27;IA locale qui veille sur votre bureau.</h1>
@@ -108,7 +216,7 @@ h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted
 <ul class="stats"><li><strong>100 %</strong><span>local : aucune image envoyée en ligne</span></li><li><strong>0</strong><span>abonnement cloud ou pointeuse à acheter</span></li><li><strong>FR / EN</strong><span>interface bilingue</span></li><li><strong>Temps réel</strong><span>présence et retards du jour</span></li></ul>
 <section id="probleme" class="sec split">
   <div><p class="kicker">Le problème</p><h2>La présence et la sécurité se gèrent encore à l&#x27;aveugle.</h2><ul class="cards"><li class="card reveal"><h3>Cahiers et feuilles Excel</h3><p>La présence se note à la main. Les retards et absences n&#x27;apparaissent qu&#x27;à la fin du mois, quand il est trop tard pour agir.</p></li><li class="card reveal"><h3>Des heures de vidéo jamais regardées</h3><p>Les caméras enregistrent, mais personne ne surveille. Après un incident, il faut fouiller les enregistrements.</p></li><li class="card reveal"><h3>Des solutions chères et hors du pays</h3><p>Les pointeuses biométriques et les services cloud coûtent cher et envoient les images du personnel sur des serveurs étrangers.</p></li></ul></div>
-  <img class="side reveal" src="img/manager.webp" alt="" width="880" height="663" loading="lazy" decoding="async">
+  <img class="side reveal" src="img/manager-880.webp" srcset="img/manager-440.webp 440w, img/manager-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async">
 </section>
 <section id="fonctionnement" class="sec dark">
   <p class="kicker">Fonctionnement</p><h2>Local et privé par conception.</h2><p class="sub">Tout le traitement se fait sur un ordinateur ordinaire du bureau. Le tableau de bord n&#x27;est accessible que depuis cet ordinateur.</p>
@@ -129,32 +237,51 @@ h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted
   <rect x="845" y="118" width="70" height="44" rx="6" class="ico"/>
   <text x="880" y="186" class="t">Tableau de bord</text>
   <text x="505" y="296" class="nocloud">✕ Aucun cloud</text>
-</svg></div>
-  <div class="split2"><ul class="points"><li class="point"><h3>Aucun cloud</h3><p>Images, visages et feuilles de temps restent dans le bureau. Rien n&#x27;est envoyé en ligne.</p></li><li class="point"><h3>Chiffré au repos</h3><p>Base de données et extraits vidéo chiffrés, clés dans le trousseau du système.</p></li><li class="point"><h3>Accès verrouillé</h3><p>Page servie sur l&#x27;ordinateur lui-même, jeton par session, contrôle d&#x27;origine, politique de sécurité stricte.</p></li><li class="point"><h3>Contrôle humain</h3><p>Inscriptions, confirmations et réponses aux alertes passent par le responsable, et sont journalisées.</p></li><li class="point"><h3>Minimisation</h3><p>Zones de travail uniquement ; personnes non examinées supprimées après 3 jours ; extraits à durée limitée.</p></li><li class="point"><h3>Matériel existant</h3><p>Un ordinateur de bureau et les caméras déjà en place suffisent.</p></li></ul><img class="side" src="img/local.webp" alt="" width="880" height="663" loading="lazy" decoding="async"></div>
+</svg><ol class="arch-list" aria-label="Caméras du bureau → Ordinateur du bureau → Tableau de bord"><li class="node">Caméras du bureau<span>réseau local</span></li><li class="node main"><strong>Ordinateur du bureau</strong><span>Détection et suivi</span><span>Moteur de correspondance intelligent</span><span>Règles : présence, retards, incidents</span><span class="ok">🔒 Base chiffrée</span></li><li class="node">Tableau de bord</li><li class="nocloud">✕ Aucun cloud</li></ol></div>
+  <div class="split2"><ul class="points"><li class="point"><h3>Aucun cloud</h3><p>Images, visages et feuilles de temps restent dans le bureau. Rien n&#x27;est envoyé en ligne.</p></li><li class="point"><h3>Chiffré au repos</h3><p>Base de données et extraits vidéo chiffrés, clés dans le trousseau du système.</p></li><li class="point"><h3>Accès verrouillé</h3><p>Page servie sur l&#x27;ordinateur lui-même, jeton par session, contrôle d&#x27;origine, politique de sécurité stricte.</p></li><li class="point"><h3>Contrôle humain</h3><p>Inscriptions, confirmations et réponses aux alertes passent par le responsable, et sont journalisées.</p></li><li class="point"><h3>Minimisation</h3><p>Zones de travail uniquement ; personnes non examinées supprimées après 3 jours ; extraits à durée limitée.</p></li><li class="point"><h3>Matériel existant</h3><p>Un ordinateur de bureau et les caméras déjà en place suffisent.</p></li></ul><img class="side" src="img/local-880.webp" srcset="img/local-440.webp 440w, img/local-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async"></div>
 </section>
 <section id="fonctionnalites" class="sec">
   <p class="kicker">Fonctionnalités</p><h2>Un seul tableau de bord pour le personnel.</h2><p class="sub">Captures du mode démo : employés fictifs aux portraits générés par IA, journée simulée.</p>
-  <figure class="feature reveal"><div class="shot"><img src="img/app-aujourdhui.webp" alt="Aujourd&#x27;hui" width="1200" height="833" loading="lazy" decoding="async"></div>
-<figcaption><span class="num">01</span><h3>Aujourd&#x27;hui</h3><p>Qui est présent maintenant, arrivées et retards par employé, employés par zone, état de chaque caméra et alertes ouvertes.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><img src="img/app-presence-semaine.webp" alt="Présence" width="1200" height="833" loading="lazy" decoding="async"></div>
-<figcaption><span class="num">02</span><h3>Présence</h3><p>Feuilles de temps par jour et par semaine comparées aux horaires prévus, export CSV pour la paie et les RH.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><img src="img/app-personnel.webp" alt="Personnel" width="1200" height="833" loading="lazy" decoding="async"></div>
-<figcaption><span class="num">03</span><h3>Personnel</h3><p>Les employés inscrits, leur rôle, leur horaire et leur statut du jour.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><img src="img/app-alertes.webp" alt="Alertes et journal" width="1200" height="833" loading="lazy" decoding="async"></div>
-<figcaption><span class="num">04</span><h3>Alertes et journal</h3><p>Incidents avec extrait chiffré, réponse du responsable en un clic, seuils qui s&#x27;ajustent, journal de toutes les décisions.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><img src="img/app-parametres.webp" alt="Paramètres" width="1200" height="833" loading="lazy" decoding="async"></div>
-<figcaption><span class="num">05</span><h3>Paramètres</h3><p>Noms et zones des caméras, jours et heures de chaque employé, durée de conservation des extraits : chaque modification est vérifiée et journalisée.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><img src="img/app-etat.webp" alt="Démarrage manuel" width="1200" height="833" loading="lazy" decoding="async"></div>
-<figcaption><span class="num">06</span><h3>Démarrage manuel</h3><p>« lao start » lance la surveillance et le tableau de bord, « lao stop » arrête tout. Rien ne démarre tout seul ; l&#x27;ordinateur reste éveillé seulement pendant le fonctionnement.</p></figcaption></figure>
-  <figure class="mobile reveal"><img src="img/app-mobile.webp" alt="Aussi lisible sur téléphone." width="420" height="1100" loading="lazy" decoding="async"><figcaption>Aussi lisible sur téléphone.</figcaption></figure>
+  <figure class="feature reveal"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-aujourdhui-390.webp 390w, img/tel-aujourdhui-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-aujourdhui-1200.webp" srcset="img/app-aujourdhui-600.webp 600w, img/app-aujourdhui-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Aujourd&#x27;hui" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">01</span><h3>Aujourd&#x27;hui</h3><p>Qui est présent maintenant, arrivées et retards par employé, employés par zone, état de chaque caméra et alertes ouvertes.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-semaine-390.webp 390w, img/tel-semaine-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-presence-semaine-1200.webp" srcset="img/app-presence-semaine-600.webp 600w, img/app-presence-semaine-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Présence" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">02</span><h3>Présence</h3><p>Feuilles de temps par jour et par semaine comparées aux horaires prévus, export CSV pour la paie et les RH.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-personnel-390.webp 390w, img/tel-personnel-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-personnel-1200.webp" srcset="img/app-personnel-600.webp 600w, img/app-personnel-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Personnel" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">03</span><h3>Personnel</h3><p>Les employés inscrits, leur rôle, leur horaire et leur statut du jour.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-alertes-390.webp 390w, img/tel-alertes-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-alertes-1200.webp" srcset="img/app-alertes-600.webp 600w, img/app-alertes-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Alertes et journal" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">04</span><h3>Alertes et journal</h3><p>Incidents avec extrait chiffré, réponse du responsable en un clic, seuils qui s&#x27;ajustent, journal de toutes les décisions.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-rapports-390.webp 390w, img/tel-rapports-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-rapports-1200.webp" srcset="img/app-rapports-600.webp 600w, img/app-rapports-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Rapports" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">05</span><h3>Rapports</h3><p>Rapport de présence du jour, de la semaine ou du mois : taux de présence, ponctualité, absences et heures par employé, en version imprimable ou PDF.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-parametres-390.webp 390w, img/tel-parametres-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-parametres-1200.webp" srcset="img/app-parametres-600.webp 600w, img/app-parametres-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Paramètres" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">06</span><h3>Paramètres</h3><p>Noms et zones des caméras, jours et heures de chaque employé, durée de conservation des extraits : chaque modification est vérifiée et journalisée.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><picture>
+<source media="(max-width: 600px)" srcset="img/tel-etat-390.webp 390w, img/tel-etat-780.webp 780w" sizes="280px" width="390" height="844">
+<img src="img/app-etat-1200.webp" srcset="img/app-etat-600.webp 600w, img/app-etat-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Démarrage manuel" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<figcaption><span class="num">07</span><h3>Démarrage manuel</h3><p>« lao start » lance la surveillance et le tableau de bord, « lao stop » arrête tout. Rien ne démarre tout seul ; l&#x27;ordinateur reste éveillé seulement pendant le fonctionnement.</p></figcaption></figure>
 </section>
-<section id="impact" class="sec tint">
+<section id="mobile" class="sec tint">
+  <div class="mobile-head"><div><p class="kicker">Mobile</p><h2>Le tableau de bord tient dans la poche.</h2><p class="sub">Sur téléphone, chaque écran passe en cartes lisibles avec une barre de navigation en bas, de grandes zones tactiles et un thème sombre. Il s&#x27;installe sur l&#x27;écran d&#x27;accueil comme une application.</p></div>
+  <ul class="ticks"><li>Barre de navigation en bas</li><li>Tableaux en cartes</li><li>Thème sombre</li><li>Installable sur l&#x27;écran d&#x27;accueil</li></ul></div>
+  <div class="phones"><figure class="phone reveal"><img src="img/tel-aujourdhui-390.webp" srcset="img/tel-aujourdhui-390.webp 390w, img/tel-aujourdhui-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Aujourd&#x27;hui" width="390" height="844" loading="lazy" decoding="async"><figcaption>Aujourd&#x27;hui</figcaption></figure><figure class="phone reveal"><img src="img/tel-presence-390.webp" srcset="img/tel-presence-390.webp 390w, img/tel-presence-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Présence du jour" width="390" height="844" loading="lazy" decoding="async"><figcaption>Présence du jour</figcaption></figure><figure class="phone reveal"><img src="img/tel-alertes-390.webp" srcset="img/tel-alertes-390.webp 390w, img/tel-alertes-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Alertes et journal" width="390" height="844" loading="lazy" decoding="async"><figcaption>Alertes et journal</figcaption></figure><figure class="phone reveal"><img src="img/tel-sombre-390.webp" srcset="img/tel-sombre-390.webp 390w, img/tel-sombre-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Thème sombre" width="390" height="844" loading="lazy" decoding="async"><figcaption>Thème sombre</figcaption></figure></div>
+</section>
+<section id="impact" class="sec">
   <div class="split"><div><p class="kicker">Impact</p><h2>Pour les bureaux, les PME et le secteur public.</h2></div>
-  <img class="side reveal" src="img/public.webp" alt="" width="880" height="663" loading="lazy" decoding="async"></div>
+  <img class="side reveal" src="img/public-880.webp" srcset="img/public-440.webp 440w, img/public-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async"></div>
   <ul class="cards three"><li class="card reveal"><h3>Ponctualité</h3><p>Les retards sont visibles le jour même, sans pointeuse ni file d&#x27;attente.</p></li><li class="card reveal"><h3>Paie et RH plus justes</h3><p>Des feuilles de temps objectives et exportables remplacent les cahiers.</p></li><li class="card reveal"><h3>Sécurité utile</h3><p>Les incidents arrivent avec leur extrait vidéo, au lieu d&#x27;heures d&#x27;enregistrement à revoir.</p></li><li class="card reveal"><h3>Souveraineté des données</h3><p>Une solution conçue au Burundi qui garde les données sur place : administrations, banques, écoles, hôpitaux, PME.</p></li><li class="card reveal"><h3>Coût faible</h3><p>Pas d&#x27;abonnement ni de matériel biométrique : on réutilise les caméras existantes.</p></li><li class="card reveal"><h3>Emplois numériques</h3><p>Installation, formation et maintenance par des techniciens locaux.</p></li></ul>
 </section>
-<section id="feuille-de-route" class="sec">
+<section id="feuille-de-route" class="sec tint">
   <p class="kicker">Feuille de route</p><h2>Une architecture modulaire, prête à grandir.</h2>
-  <ol class="road"><li class="step reveal"><span class="when">Aujourd&#x27;hui · v1</span><p>Aujourd&#x27;hui, Présence (jour, semaine, CSV), Personnel, Alertes et journal, Découverte, Paramètres modifiables, démarrage « lao start / lao stop », mode démo, FR / EN.</p></li><li class="step reveal"><span class="when">Décembre 2026</span><p>Inscription guidée dans l&#x27;application (webcam ou caméra, angles, contrôles de qualité).</p></li><li class="step reveal"><span class="when">T1 2027</span><p>Pilote en bureau, rapports mensuels, plusieurs sites, rôles responsable et RH.</p></li><li class="step reveal"><span class="when">T2 2027</span><p>Nouveaux modules de sécurité en option, ajoutés comme sections du même tableau de bord, selon les besoins et le cadre légal.</p></li><li class="step reveal"><span class="when">Ensuite</span><p>Analyse d&#x27;impact, certification, déploiement auprès des administrations et des PME.</p></li></ol>
+  <ol class="road"><li class="step reveal"><span class="when">Aujourd&#x27;hui · v1</span><p>Aujourd&#x27;hui, Présence (jour, semaine, CSV), Personnel, Alertes et journal, Rapports imprimables, Découverte, Paramètres modifiables, « lao start / lao stop », version téléphone installable et thème sombre, mode démo, FR / EN.</p></li><li class="step reveal"><span class="when">Décembre 2026</span><p>Inscription guidée dans l&#x27;application (webcam ou caméra, angles, contrôles de qualité).</p></li><li class="step reveal"><span class="when">T1 2027</span><p>Pilote en bureau, plusieurs sites, rôles responsable et RH.</p></li><li class="step reveal"><span class="when">T2 2027</span><p>Nouveaux modules de sécurité en option, ajoutés comme sections du même tableau de bord, selon les besoins et le cadre légal.</p></li><li class="step reveal"><span class="when">Ensuite</span><p>Analyse d&#x27;impact, certification, déploiement auprès des administrations et des PME.</p></li></ol>
 </section>
 <section id="contact" class="sec contact">
   <h2>Parlons de votre bureau.</h2><p class="sub">Démonstration sur données fictives disponible sur demande.</p>
-  <p class="who"><strong>Alex Nahimana</strong> · POPEKI SURL · <a href="mailto:alex@popeki.com">alex@popeki.com</a></p>
+  <p class="who"><strong>Alex Nahimana</strong> · POPEKI SURL · <a class="mail" href="mailto:alex@popeki.com">alex@popeki.com</a></p>
 </section>
 </main>
 <footer class="foot"><p>© 2026 POPEKI SURL · Live AI Office</p><p>Images d&#x27;illustration générées par IA : personnes fictives. Captures issues du mode démo, sans aucune donnée réelle.</p></footer>
