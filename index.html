@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live AI Office — tableau de bord de sécurité intelligent, local et privé</title>
+<meta name="description" content="Live AI Office transforme les caméras d&#x27;un bureau en tableau de bord de sécurité intelligent pour le personnel : présence, retards, feuilles de temps, alertes. Tout reste sur place.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Live AI Office — tableau de bord de sécurité intelligent, local et privé">
+<meta property="og:description" content="Live AI Office transforme les caméras d&#x27;un bureau en tableau de bord de sécurité intelligent pour le personnel : présence, retards, feuilles de temps, alertes. Tout reste sur place.">
+<meta property="og:image" content="img/hero.webp">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero.webp">
+<style>:root{--ink:#0e1726;--muted:#4a5568;--blue:#2b59c3;--blue2:#5b8cff;--bg:#f7f8fc;--card:#fff;--line:#e3e7f0;--dark:#0b1220;--r:20px;
+font-family:"Inter","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}a{color:var(--blue)}
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:14px clamp(16px,4vw,48px);
+background:rgba(247,248,252,.78);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgba(14,23,38,.06)}
+.brand{font-weight:750;letter-spacing:-.02em;text-decoration:none;color:var(--ink);display:flex;gap:10px;align-items:center;font-size:1.05rem}
+.mark{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-size:.9rem}
+.links{display:flex;gap:22px;margin-left:auto}.links a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}
+.links a:hover{color:var(--ink)}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.toggle a{padding:6px 14px;font-weight:600;font-size:.85rem;text-decoration:none;color:var(--muted)}
+.toggle a[aria-current]{background:var(--ink);color:#fff}
+.hero{position:relative;min-height:min(88vh,820px);display:grid;align-items:end;overflow:hidden;color:#fff}
+.hero-img{position:absolute;inset:0}.hero-img img{width:100%;height:100%;object-fit:cover;animation:drift 24s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.15) 0%,rgba(11,18,32,.55) 45%,rgba(11,18,32,.92) 100%)}
+.hero-text{position:relative;z-index:1;max-width:860px;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);font-size:.85rem;font-weight:600;letter-spacing:.02em;backdrop-filter:blur(6px)}
+h1{font-size:clamp(2.3rem,5.6vw,4.4rem);line-height:1.04;letter-spacing:-.035em;margin:18px 0 16px;font-weight:800}
+.lead{font-size:clamp(1.02rem,1.5vw,1.2rem);color:rgba(255,255,255,.88);max-width:700px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:13px 22px;border-radius:999px;font-weight:650;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;box-shadow:0 10px 30px rgba(43,89,195,.45)}
+.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.stats{list-style:none;margin:-44px auto 0;padding:0 clamp(16px,4vw,48px);display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1200px;position:relative;z-index:2}
+.stats li{background:var(--card);border-radius:var(--r);padding:20px 22px;box-shadow:0 12px 40px rgba(14,23,38,.08);border:1px solid var(--line)}
+.stats strong{display:block;font-size:1.6rem;letter-spacing:-.03em;color:var(--blue)}.stats span{color:var(--muted);font-size:.9rem}
+.sec{max-width:1200px;margin:0 auto;padding:clamp(64px,10vw,120px) clamp(16px,4vw,48px)}
+.kicker{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin:0}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem);letter-spacing:-.03em;line-height:1.12;margin:10px 0 18px;max-width:760px}
+h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted);max-width:720px;font-size:1.05rem}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.split2{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;margin-top:40px}
+.side{border-radius:28px;box-shadow:0 24px 60px rgba(14,23,38,.18);aspect-ratio:4/3;object-fit:cover}
+.cards{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}.cards.three{grid-template-columns:repeat(3,1fr);margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(14,23,38,.08)}.card p{margin:0;color:var(--muted)}
+.dark{max-width:none;background:radial-gradient(1200px 500px at 20% 0%,#1b2f63 0%,var(--dark) 60%);color:#e8edf7}
+.dark>*{max-width:1104px;margin-left:auto;margin-right:auto}.dark .sub,.dark .point p{color:#aab6cc}.dark .kicker{color:#8fb0ff}
+.arch-wrap{margin-top:36px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:20px}
+.arch{width:100%;height:auto;font-family:inherit}.arch .box{fill:rgba(255,255,255,.06);stroke:rgba(255,255,255,.18)}
+.arch .main{fill:rgba(91,140,255,.10);stroke:#5b8cff;stroke-width:1.5}
+.arch .t{fill:#fff;font-size:15px;text-anchor:middle;font-weight:600}.arch .strong{font-size:18px}
+.arch .s{fill:#8fb0ff;font-size:12px;text-anchor:middle}.arch .s2{fill:#dfe7ff;font-size:14px;text-anchor:middle}
+.arch .chip-b{fill:rgba(91,140,255,.16)}.arch .chip-g{fill:rgba(64,200,140,.18)}
+.arch .ico{fill:none;stroke:#8fb0ff;stroke-width:3}.arch .ico-in{fill:#8fb0ff}
+.arch .flow{stroke:#5b8cff;stroke-width:4;stroke-dasharray:10 8;fill:none;animation:flow 1.6s linear infinite}
+.arch .nocloud{fill:#ff9d9d;font-size:13px;text-anchor:middle;font-weight:600}
+.points{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.point{border-left:2px solid #5b8cff;padding-left:16px}.point p{margin:0;font-size:.95rem}
+.feature{display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:center;margin:56px 0}
+.feature.flip{grid-template-columns:.65fr 1.35fr}.feature.flip .shot{order:2}
+.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(14,23,38,.16);background:#fff}
+.feature .num{color:var(--blue);font-weight:800;font-size:.9rem;letter-spacing:.1em}.feature h3{font-size:1.5rem;margin:6px 0 8px}
+.feature p{color:var(--muted);margin:0}
+.mobile{display:flex;align-items:center;gap:28px;justify-content:center;margin-top:40px}
+.mobile img{width:240px;border-radius:28px;border:8px solid var(--ink);box-shadow:0 30px 70px rgba(14,23,38,.25)}
+.mobile figcaption{font-weight:650;font-size:1.2rem}
+.tint{max-width:none;background:linear-gradient(180deg,#eef2fb,#f7f8fc)}.tint>*{max-width:1104px;margin-left:auto;margin-right:auto}
+.road{list-style:none;padding:0;margin:36px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px 18px}
+.step::before{content:"";position:absolute;top:-1px;left:18px;right:18px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.step:first-child{background:linear-gradient(160deg,#eaf0ff,#fff);border-color:#c9d6ff}
+.when{font-weight:750;font-size:.95rem}.step p{margin:8px 0 0;color:var(--muted);font-size:.92rem}
+.contact{text-align:center}.contact h2,.contact .sub{margin-left:auto;margin-right:auto}
+.who{font-size:1.15rem;margin-top:22px}
+.foot{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem;padding:28px 16px 40px}.foot p{margin:4px 0}
+@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@keyframes reveal{from{opacity:0;transform:translateY(34px) scale(.985)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 28%}}
+@media (max-width:900px){.links{display:none}.toggle{margin-left:auto}.stats{grid-template-columns:1fr 1fr}.split,.split2,.feature,.feature.flip{grid-template-columns:1fr}
+.feature.flip .shot{order:0}.cards.three{grid-template-columns:1fr}.points{grid-template-columns:1fr}.road{grid-template-columns:1fr}.mobile{flex-direction:column}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="bar"><a class="brand" href="#top"><span class="mark">◉</span>Live AI Office</a>
+<nav class="links"><a href="#probleme">Problème</a><a href="#fonctionnement">Fonctionnement</a><a href="#fonctionnalites">Fonctionnalités</a><a href="#impact">Impact</a><a href="#feuille-de-route">Feuille de route</a><a href="#contact">Contact</a></nav>
+<span class="toggle"><a aria-current="true">FR</a><a href="en/" hreflang="en">EN</a></span></header>
+<main id="top">
+<section class="hero">
+  <div class="hero-img"><img src="img/hero.webp" alt="" width="1344" height="752" fetchpriority="high"></div>
+  <div class="hero-text">
+    <p class="eyebrow">Intelligence de sécurité · conçu au Burundi</p>
+    <h1>L&#x27;IA locale qui veille sur votre bureau.</h1>
+    <p class="lead">Live AI Office transforme les caméras déjà installées en un tableau de bord de sécurité intelligent centré sur le personnel : qui est présent, qui est en retard, les heures sur site et les alertes, en temps réel. Sans cloud : les images et les données ne quittent jamais le bureau.</p>
+    <p class="ctas"><a class="btn primary" href="#fonctionnalites">Voir les écrans</a><a class="btn ghost" href="#contact">Nous contacter</a></p>
+  </div>
+</section>
+<ul class="stats"><li><strong>100 %</strong><span>local : aucune image envoyée en ligne</span></li><li><strong>0</strong><span>abonnement cloud ou pointeuse à acheter</span></li><li><strong>FR / EN</strong><span>interface bilingue</span></li><li><strong>Temps réel</strong><span>présence et retards du jour</span></li></ul>
+<section id="probleme" class="sec split">
+  <div><p class="kicker">Le problème</p><h2>La présence et la sécurité se gèrent encore à l&#x27;aveugle.</h2><ul class="cards"><li class="card reveal"><h3>Cahiers et feuilles Excel</h3><p>La présence se note à la main. Les retards et absences n&#x27;apparaissent qu&#x27;à la fin du mois, quand il est trop tard pour agir.</p></li><li class="card reveal"><h3>Des heures de vidéo jamais regardées</h3><p>Les caméras enregistrent, mais personne ne surveille. Après un incident, il faut fouiller les enregistrements.</p></li><li class="card reveal"><h3>Des solutions chères et hors du pays</h3><p>Les pointeuses biométriques et les services cloud coûtent cher et envoient les images du personnel sur des serveurs étrangers.</p></li></ul></div>
+  <img class="side reveal" src="img/manager.webp" alt="" width="880" height="663" loading="lazy" decoding="async">
+</section>
+<section id="fonctionnement" class="sec dark">
+  <p class="kicker">Fonctionnement</p><h2>Local et privé par conception.</h2><p class="sub">Tout le traitement se fait sur un ordinateur ordinaire du bureau. Le tableau de bord n&#x27;est accessible que depuis cet ordinateur.</p>
+  <div class="arch-wrap reveal"><svg class="arch" viewBox="0 0 960 300" role="img" aria-label="Caméras du bureau → Ordinateur du bureau → Tableau de bord">
+  <defs><linearGradient id="g-blue" x1="0" x2="1"><stop offset="0" stop-color="#2b59c3"/><stop offset="1" stop-color="#5b8cff"/></linearGradient></defs>
+  <rect x="10" y="95" width="170" height="110" rx="20" class="box"/>
+  <circle cx="95" cy="135" r="18" class="ico"/><circle cx="95" cy="135" r="7" class="ico-in"/>
+  <text x="95" y="182" class="t">Caméras du bureau</text>
+  <path d="M190 150 H285" class="flow"/><text x="238" y="138" class="s">réseau local</text>
+  <rect x="295" y="20" width="420" height="260" rx="26" class="box main"/>
+  <text x="505" y="56" class="t strong">Ordinateur du bureau</text>
+  <rect x="325" y="76" width="360" height="40" rx="12" class="chip-b"/><text x="505" y="101" class="s2">Détection et suivi</text>
+  <rect x="325" y="124" width="360" height="40" rx="12" class="chip-b"/><text x="505" y="149" class="s2">Moteur de correspondance intelligent</text>
+  <rect x="325" y="172" width="360" height="40" rx="12" class="chip-b"/><text x="505" y="197" class="s2">Règles : présence, retards, incidents</text>
+  <rect x="325" y="220" width="360" height="40" rx="12" class="chip-g"/><text x="505" y="245" class="s2">🔒 Base chiffrée</text>
+  <path d="M725 150 H800" class="flow"/>
+  <rect x="810" y="95" width="140" height="110" rx="20" class="box"/>
+  <rect x="845" y="118" width="70" height="44" rx="6" class="ico"/>
+  <text x="880" y="186" class="t">Tableau de bord</text>
+  <text x="505" y="296" class="nocloud">✕ Aucun cloud</text>
+</svg></div>
+  <div class="split2"><ul class="points"><li class="point"><h3>Aucun cloud</h3><p>Images, visages et feuilles de temps restent dans le bureau. Rien n&#x27;est envoyé en ligne.</p></li><li class="point"><h3>Chiffré au repos</h3><p>Base de données et extraits vidéo chiffrés, clés dans le trousseau du système.</p></li><li class="point"><h3>Accès verrouillé</h3><p>Page servie sur l&#x27;ordinateur lui-même, jeton par session, contrôle d&#x27;origine, politique de sécurité stricte.</p></li><li class="point"><h3>Contrôle humain</h3><p>Inscriptions, confirmations et réponses aux alertes passent par le responsable, et sont journalisées.</p></li><li class="point"><h3>Minimisation</h3><p>Zones de travail uniquement ; personnes non examinées supprimées après 3 jours ; extraits à durée limitée.</p></li><li class="point"><h3>Matériel existant</h3><p>Un ordinateur de bureau et les caméras déjà en place suffisent.</p></li></ul><img class="side" src="img/local.webp" alt="" width="880" height="663" loading="lazy" decoding="async"></div>
+</section>
+<section id="fonctionnalites" class="sec">
+  <p class="kicker">Fonctionnalités</p><h2>Un seul tableau de bord pour le personnel.</h2><p class="sub">Captures du mode démo : employés fictifs, silhouettes générées, journée simulée.</p>
+  <figure class="feature reveal"><div class="shot"><img src="img/app-aujourdhui.webp" alt="Aujourd&#x27;hui" width="1200" height="833" loading="lazy" decoding="async"></div>
+<figcaption><span class="num">01</span><h3>Aujourd&#x27;hui</h3><p>Qui est présent maintenant, arrivées et retards par employé, employés par zone, état de chaque caméra et alertes ouvertes.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><img src="img/app-presence-semaine.webp" alt="Présence" width="1200" height="833" loading="lazy" decoding="async"></div>
+<figcaption><span class="num">02</span><h3>Présence</h3><p>Feuilles de temps par jour et par semaine comparées aux horaires prévus, export CSV pour la paie et les RH.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><img src="img/app-personnel.webp" alt="Personnel" width="1200" height="833" loading="lazy" decoding="async"></div>
+<figcaption><span class="num">03</span><h3>Personnel</h3><p>Les employés inscrits, leur rôle, leur horaire et leur statut du jour.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><img src="img/app-alertes.webp" alt="Alertes et journal" width="1200" height="833" loading="lazy" decoding="async"></div>
+<figcaption><span class="num">04</span><h3>Alertes et journal</h3><p>Incidents avec extrait chiffré, réponse du responsable en un clic, seuils qui s&#x27;ajustent, journal de toutes les décisions.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><img src="img/app-parametres.webp" alt="Paramètres" width="1200" height="833" loading="lazy" decoding="async"></div>
+<figcaption><span class="num">05</span><h3>Paramètres</h3><p>Caméras, heures d&#x27;ouverture, horaires du personnel et durées de conservation.</p></figcaption></figure>
+  <figure class="mobile reveal"><img src="img/app-mobile.webp" alt="Aussi lisible sur téléphone." width="420" height="1100" loading="lazy" decoding="async"><figcaption>Aussi lisible sur téléphone.</figcaption></figure>
+</section>
+<section id="impact" class="sec tint">
+  <div class="split"><div><p class="kicker">Impact</p><h2>Pour les bureaux, les PME et le secteur public.</h2></div>
+  <img class="side reveal" src="img/public.webp" alt="" width="880" height="663" loading="lazy" decoding="async"></div>
+  <ul class="cards three"><li class="card reveal"><h3>Ponctualité</h3><p>Les retards sont visibles le jour même, sans pointeuse ni file d&#x27;attente.</p></li><li class="card reveal"><h3>Paie et RH plus justes</h3><p>Des feuilles de temps objectives et exportables remplacent les cahiers.</p></li><li class="card reveal"><h3>Sécurité utile</h3><p>Les incidents arrivent avec leur extrait vidéo, au lieu d&#x27;heures d&#x27;enregistrement à revoir.</p></li><li class="card reveal"><h3>Souveraineté des données</h3><p>Une solution conçue au Burundi qui garde les données sur place : administrations, banques, écoles, hôpitaux, PME.</p></li><li class="card reveal"><h3>Coût faible</h3><p>Pas d&#x27;abonnement ni de matériel biométrique : on réutilise les caméras existantes.</p></li><li class="card reveal"><h3>Emplois numériques</h3><p>Installation, formation et maintenance par des techniciens locaux.</p></li></ul>
+</section>
+<section id="feuille-de-route" class="sec">
+  <p class="kicker">Feuille de route</p><h2>Une architecture modulaire, prête à grandir.</h2>
+  <ol class="road"><li class="step reveal"><span class="when">Aujourd&#x27;hui · v1</span><p>Aujourd&#x27;hui, Présence (jour, semaine, CSV), Personnel, Alertes et journal, Découverte, Paramètres, mode démo, FR / EN.</p></li><li class="step reveal"><span class="when">Décembre 2026</span><p>Inscription guidée dans l&#x27;application (webcam ou caméra, angles, contrôles de qualité) et démarrage en une commande.</p></li><li class="step reveal"><span class="when">T1 2027</span><p>Pilote en bureau, rapports mensuels, plusieurs sites, rôles responsable et RH.</p></li><li class="step reveal"><span class="when">T2 2027</span><p>Nouveaux modules de sécurité en option, ajoutés comme sections du même tableau de bord, selon les besoins et le cadre légal.</p></li><li class="step reveal"><span class="when">Ensuite</span><p>Analyse d&#x27;impact, certification, déploiement auprès des administrations et des PME.</p></li></ol>
+</section>
+<section id="contact" class="sec contact">
+  <h2>Parlons de votre bureau.</h2><p class="sub">Démonstration sur données fictives disponible sur demande.</p>
+  <p class="who"><strong>Alex Nahimana</strong> · POPEKI SURL · <a href="mailto:alex@popeki.com">alex@popeki.com</a></p>
+</section>
+</main>
+<footer class="foot"><p>© 2026 POPEKI SURL · Live AI Office</p><p>Images d&#x27;illustration générées par IA : personnes fictives. Captures issues du mode démo, sans aucune donnée réelle.</p></footer>
+</body>
+</html>
