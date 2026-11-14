@@ -1,7 +1,6 @@
 # Live AI Office — showcase site requirements
 
-Hand-over spec so another builder (e.g. Claude Code) can take over. Current build: repo `bayhaj1/live-ai-office-site`
-(public, GitHub Pages from `main`, root). Source of the build script and styles: `/home/box/lao/site_work/` (build.py, site.css).
+Hand-over spec for the static showcase (repo `bayhaj1/live-ai-office-site`, GitHub Pages from `main`).
 
 ## Purpose and framing
 - Public showcase for the Burundi Ministry of Finance, Budget and Digital Economy talent census (submission 15 Nov 2026;
@@ -35,7 +34,7 @@ Hand-over spec so another builder (e.g. Claude Code) can take over. Current buil
 - Motion: hero slow drift, hero text rise, animated data-flow lines in the diagram, scroll reveal via CSS
   `animation-timeline: view()` (progressive enhancement); everything off under `prefers-reduced-motion`.
 - Visuals: Higgsfield (gpt_image_2_6), **synthetic people only**, a modern African office setting; **no real photos or faces,
-  no camera frames, no IPs, no office names, no data from the office Mac, no flags, national symbols, ministry logos or
+  no camera frames, no IPs, no office names, no flags, national symbols, ministry logos or
   official seals**. Every image is checked by eye before it is pushed. App screenshots come only from `python -m
   business_watch.demo` (fictional employees, generated silhouettes, simulated day).
 
