@@ -32,7 +32,8 @@ Hand-over spec for the static showcase (repo `bayhaj1/live-ai-office-site`, GitH
 - Same Material 3-inspired look as the app (blue primary #2b59c3 / #5b8cff, soft surfaces, rounded 16–28 px cards), modern
   typography with tight tracking, dark "how it works" band, tinted impact band.
 - Motion: hero slow drift, hero text rise, animated data-flow lines in the diagram, scroll reveal via CSS
-  `animation-timeline: view()` (progressive enhancement); everything off under `prefers-reduced-motion`.
+  `animation-timeline: view()` (progressive enhancement, **transform only — never start at opacity 0**, which hid
+  images and blocked `loading=lazy` on iOS Safari); everything off under `prefers-reduced-motion`.
 - Visuals: Higgsfield (gpt_image_2_6), **synthetic people only**, a modern African office setting; **no real photos or faces,
   no camera frames, no IPs, no office names, no flags, national symbols, ministry logos or
   official seals**. Every image is checked by eye before it is pushed. App screenshots come only from `python -m
@@ -42,6 +43,7 @@ Hand-over spec for the static showcase (repo `bayhaj1/live-ai-office-site`, GitH
 - Static HTML + inline CSS, **no JavaScript, no trackers, no analytics, no external fonts or CDNs**; every asset same-origin.
 - Meta CSP: `default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'`;
   `referrer: no-referrer`.
-- Images in WebP (hero ≈1344 px, sections ≈880 px, screenshots 1200 px), width/height set, lazy loading below the fold, hero
-  preloaded; total page weight well under 1 MB.
+- Images in WebP with a JPEG fallback in `<picture>` for every photo and screenshot (width/height set; hero preloaded).
+  Lazy loading below the fold. Phone frames use a light placeholder background, not black, so a slow load is never a
+  black rectangle. WebP keeps modern-browser page weight well under 1 MB; do not add JS, trackers or CDNs.
 - `.nojekyll`; no secrets, no real data, nothing from the private code repo except demo screenshots.

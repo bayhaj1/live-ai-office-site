@@ -32,7 +32,7 @@
 <link rel="preload" as="image" href="img/hero-1344.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1344.webp 1344w" imagesizes="100vw" fetchpriority="high">
 <style>:root{--ink:#0e1726;--muted:#4a5568;--blue:#2b59c3;--blue2:#5b8cff;--bg:#f7f8fc;--card:#fff;--line:#e3e7f0;--dark:#0b1220;--r:20px;
 font-family:"Inter","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;overflow-x:clip;line-height:1.6;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}a{color:var(--blue)}
 .bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:24px;padding:12px max(clamp(16px,4vw,48px),env(safe-area-inset-right)) 12px max(clamp(16px,4vw,48px),env(safe-area-inset-left));
 background:rgba(247,248,252,.78);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid rgba(14,23,38,.06)}
@@ -44,7 +44,7 @@ background:rgba(247,248,252,.78);backdrop-filter:saturate(1.6) blur(14px);border
 .toggle a{padding:6px 14px;font-weight:600;font-size:.85rem;text-decoration:none;color:var(--muted)}
 .toggle a[aria-current]{background:var(--ink);color:#fff}
 .hero{position:relative;min-height:min(88vh,820px);display:grid;align-items:end;overflow:hidden;color:#fff}
-.hero-img{position:absolute;inset:0}.hero-img img{width:100%;height:100%;object-fit:cover;animation:drift 24s ease-in-out infinite alternate}
+.hero-img{position:absolute;inset:0}.hero-img picture,.hero-img img{width:100%;height:100%;display:block}.hero-img img{object-fit:cover;animation:drift 24s ease-in-out infinite alternate}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.15) 0%,rgba(11,18,32,.55) 45%,rgba(11,18,32,.92) 100%)}
 .hero-text{position:relative;z-index:1;max-width:860px;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
 .eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);font-size:.85rem;font-weight:600;letter-spacing:.02em;backdrop-filter:blur(6px)}
@@ -64,7 +64,7 @@ h2{font-size:clamp(1.8rem,3.6vw,2.8rem);letter-spacing:-.03em;line-height:1.12;m
 h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted);max-width:720px;font-size:1.05rem}
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .split2{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;margin-top:40px}
-.side{border-radius:28px;box-shadow:0 24px 60px rgba(14,23,38,.18);aspect-ratio:4/3;object-fit:cover}
+.side{border-radius:28px;box-shadow:0 24px 60px rgba(14,23,38,.18);aspect-ratio:4/3;object-fit:cover;overflow:hidden}
 .cards{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}.cards.three{grid-template-columns:repeat(3,1fr);margin-top:40px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;transition:transform .25s,box-shadow .25s}
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(14,23,38,.08)}.card p{margin:0;color:var(--muted)}
@@ -83,7 +83,7 @@ h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted
 .point{border-left:2px solid #5b8cff;padding-left:16px}.point p{margin:0;font-size:.95rem}
 .feature{display:grid;grid-template-columns:1.35fr .65fr;gap:44px;align-items:center;margin:56px 0}
 .feature.flip{grid-template-columns:.65fr 1.35fr}.feature.flip .shot{order:2}
-.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(14,23,38,.16);background:#fff}
+.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(14,23,38,.16);background:#eef2fb}.shot picture{display:block;width:100%}.shot img{width:100%;height:auto;display:block;aspect-ratio:1200/833}
 .feature .num{color:var(--blue);font-weight:800;font-size:.9rem;letter-spacing:.1em}.feature h3{font-size:1.5rem;margin:6px 0 8px}
 .feature p{color:var(--muted);margin:0}
 .tint{max-width:none;background:linear-gradient(180deg,#eef2fb,#f7f8fc)}.tint>*{max-width:1104px;margin-left:auto;margin-right:auto}
@@ -98,7 +98,7 @@ h3{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}.sub{color:var(--muted
 @keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes flow{to{stroke-dashoffset:-36}}
-@keyframes reveal{from{opacity:0;transform:translateY(34px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes reveal{from{transform:translateY(24px)}to{transform:none}}
 @supports (animation-timeline: view()){.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 0% cover 28%}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
@@ -130,7 +130,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--blue2);outline-off
 .ticks li::before{content:"✓";position:absolute;left:16px;color:var(--blue);font-weight:800}
 .phones{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,3vw,36px);margin-top:44px}
 .phone{margin:0;text-align:center}
-.phone img{width:100%;max-width:260px;margin:0 auto;border-radius:34px;border:7px solid #0e1726;box-shadow:0 30px 60px rgba(14,23,38,.22);background:#0e1726}
+.phone picture{width:100%;max-width:260px;margin:0 auto;display:block}.phone img{width:100%;display:block;border-radius:34px;border:7px solid #0e1726;box-shadow:0 30px 60px rgba(14,23,38,.22);background:#eef2fb;aspect-ratio:390/844}
 .phone figcaption{margin-top:14px;font-weight:650}
 @media (max-width:900px){
 .links{display:none}
@@ -183,7 +183,7 @@ h2{font-size:clamp(1.6rem,7vw,2rem)}
 .sub{font-size:1rem}
 .side{border-radius:20px}
 .cards.three{grid-template-columns:1fr}
-.shot{max-width:280px;margin:0 auto;border-radius:30px;border:7px solid #0e1726;background:#0e1726}
+.shot{width:280px;max-width:100%;margin:0 auto;border-radius:30px;border:7px solid #0e1726;background:#eef2fb;aspect-ratio:390/844}.shot img{aspect-ratio:390/844}
 .feature h3{font-size:1.3rem}
 .feature figcaption{text-align:center}
 .phones{gap:14px 12px}
@@ -205,7 +205,10 @@ h2{font-size:clamp(1.6rem,7vw,2rem)}
 <nav aria-label="Menu"><a href="#probleme">Problème</a><a href="#fonctionnement">Fonctionnement</a><a href="#fonctionnalites">Fonctionnalités</a><a href="#mobile">Mobile</a><a href="#impact">Impact</a><a href="#feuille-de-route">Feuille de route</a><a href="#contact">Contact</a></nav></details></header>
 <main id="top" tabindex="-1">
 <section class="hero">
-  <div class="hero-img"><img src="img/hero-1344.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1344.webp 1344w" sizes="100vw" alt="" width="1344" height="752" fetchpriority="high"></div>
+  <div class="hero-img"><picture>
+<source type="image/webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1344.webp 1344w" sizes="100vw">
+<img src="img/hero-1344.jpg" srcset="img/hero-640.jpg 640w, img/hero-1024.jpg 1024w, img/hero-1344.jpg 1344w" sizes="100vw" alt="" width="1344" height="752" fetchpriority="high">
+</picture></div>
   <div class="hero-text">
     <p class="eyebrow">Intelligence de sécurité · conçu au Burundi</p>
     <h1>L&#x27;IA locale qui veille sur votre bureau.</h1>
@@ -216,7 +219,10 @@ h2{font-size:clamp(1.6rem,7vw,2rem)}
 <ul class="stats"><li><strong>100 %</strong><span>local : aucune image envoyée en ligne</span></li><li><strong>0</strong><span>abonnement cloud ou pointeuse à acheter</span></li><li><strong>FR / EN</strong><span>interface bilingue</span></li><li><strong>Temps réel</strong><span>présence et retards du jour</span></li></ul>
 <section id="probleme" class="sec split">
   <div><p class="kicker">Le problème</p><h2>La présence et la sécurité se gèrent encore à l&#x27;aveugle.</h2><ul class="cards"><li class="card reveal"><h3>Cahiers et feuilles Excel</h3><p>La présence se note à la main. Les retards et absences n&#x27;apparaissent qu&#x27;à la fin du mois, quand il est trop tard pour agir.</p></li><li class="card reveal"><h3>Des heures de vidéo jamais regardées</h3><p>Les caméras enregistrent, mais personne ne surveille. Après un incident, il faut fouiller les enregistrements.</p></li><li class="card reveal"><h3>Des solutions chères et hors du pays</h3><p>Les pointeuses biométriques et les services cloud coûtent cher et envoient les images du personnel sur des serveurs étrangers.</p></li></ul></div>
-  <img class="side reveal" src="img/manager-880.webp" srcset="img/manager-440.webp 440w, img/manager-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async">
+  <picture>
+<source type="image/webp" srcset="img/manager-440.webp 440w, img/manager-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px">
+<img class="side reveal" src="img/manager-880.jpg" srcset="img/manager-440.jpg 440w, img/manager-880.jpg 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async">
+</picture>
 </section>
 <section id="fonctionnement" class="sec dark">
   <p class="kicker">Fonctionnement</p><h2>Local et privé par conception.</h2><p class="sub">Tout le traitement se fait sur un ordinateur ordinaire du bureau. Le tableau de bord n&#x27;est accessible que depuis cet ordinateur.</p>
@@ -238,41 +244,80 @@ h2{font-size:clamp(1.6rem,7vw,2rem)}
   <text x="880" y="186" class="t">Tableau de bord</text>
   <text x="505" y="296" class="nocloud">✕ Aucun cloud</text>
 </svg><ol class="arch-list" aria-label="Caméras du bureau → Ordinateur du bureau → Tableau de bord"><li class="node">Caméras du bureau<span>réseau local</span></li><li class="node main"><strong>Ordinateur du bureau</strong><span>Détection et suivi</span><span>Moteur de correspondance intelligent</span><span>Règles : présence, retards, incidents</span><span class="ok">🔒 Base chiffrée</span></li><li class="node">Tableau de bord</li><li class="nocloud">✕ Aucun cloud</li></ol></div>
-  <div class="split2"><ul class="points"><li class="point"><h3>Aucun cloud</h3><p>Images, visages et feuilles de temps restent dans le bureau. Rien n&#x27;est envoyé en ligne.</p></li><li class="point"><h3>Chiffré au repos</h3><p>Base de données et extraits vidéo chiffrés, clés dans le trousseau du système.</p></li><li class="point"><h3>Accès verrouillé</h3><p>Page servie sur l&#x27;ordinateur lui-même, jeton par session, contrôle d&#x27;origine, politique de sécurité stricte.</p></li><li class="point"><h3>Contrôle humain</h3><p>Inscriptions, confirmations et réponses aux alertes passent par le responsable, et sont journalisées.</p></li><li class="point"><h3>Minimisation</h3><p>Zones de travail uniquement ; personnes non examinées supprimées après 3 jours ; extraits à durée limitée.</p></li><li class="point"><h3>Matériel existant</h3><p>Un ordinateur de bureau et les caméras déjà en place suffisent.</p></li></ul><img class="side" src="img/local-880.webp" srcset="img/local-440.webp 440w, img/local-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async"></div>
+  <div class="split2"><ul class="points"><li class="point"><h3>Aucun cloud</h3><p>Images, visages et feuilles de temps restent dans le bureau. Rien n&#x27;est envoyé en ligne.</p></li><li class="point"><h3>Chiffré au repos</h3><p>Base de données et extraits vidéo chiffrés, clés dans le trousseau du système.</p></li><li class="point"><h3>Accès verrouillé</h3><p>Page servie sur l&#x27;ordinateur lui-même, jeton par session, contrôle d&#x27;origine, politique de sécurité stricte.</p></li><li class="point"><h3>Contrôle humain</h3><p>Inscriptions, confirmations et réponses aux alertes passent par le responsable, et sont journalisées.</p></li><li class="point"><h3>Minimisation</h3><p>Zones de travail uniquement ; personnes non examinées supprimées après 3 jours ; extraits à durée limitée.</p></li><li class="point"><h3>Matériel existant</h3><p>Un ordinateur de bureau et les caméras déjà en place suffisent.</p></li></ul><picture>
+<source type="image/webp" srcset="img/local-440.webp 440w, img/local-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px">
+<img class="side" src="img/local-880.jpg" srcset="img/local-440.jpg 440w, img/local-880.jpg 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async">
+</picture></div>
 </section>
 <section id="fonctionnalites" class="sec">
   <p class="kicker">Fonctionnalités</p><h2>Un seul tableau de bord pour le personnel.</h2><p class="sub">Captures du mode démo : employés fictifs aux portraits générés par IA, journée simulée.</p>
   <figure class="feature reveal"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-aujourdhui-390.webp 390w, img/tel-aujourdhui-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-aujourdhui-1200.webp" srcset="img/app-aujourdhui-600.webp 600w, img/app-aujourdhui-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Aujourd&#x27;hui" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-aujourdhui-390.webp 390w, img/tel-aujourdhui-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-aujourdhui-390.jpg 390w, img/tel-aujourdhui-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-aujourdhui-600.webp 600w, img/app-aujourdhui-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-aujourdhui-1200.jpg" srcset="img/app-aujourdhui-600.jpg 600w, img/app-aujourdhui-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Aujourd&#x27;hui" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">01</span><h3>Aujourd&#x27;hui</h3><p>Qui est présent maintenant, arrivées et retards par employé, employés par zone, état de chaque caméra et alertes ouvertes.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-semaine-390.webp 390w, img/tel-semaine-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-presence-semaine-1200.webp" srcset="img/app-presence-semaine-600.webp 600w, img/app-presence-semaine-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Présence" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-semaine-390.webp 390w, img/tel-semaine-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-semaine-390.jpg 390w, img/tel-semaine-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-presence-semaine-600.webp 600w, img/app-presence-semaine-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-presence-semaine-1200.jpg" srcset="img/app-presence-semaine-600.jpg 600w, img/app-presence-semaine-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Présence" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">02</span><h3>Présence</h3><p>Feuilles de temps par jour et par semaine comparées aux horaires prévus, export CSV pour la paie et les RH.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-personnel-390.webp 390w, img/tel-personnel-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-personnel-1200.webp" srcset="img/app-personnel-600.webp 600w, img/app-personnel-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Personnel" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-personnel-390.webp 390w, img/tel-personnel-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-personnel-390.jpg 390w, img/tel-personnel-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-personnel-600.webp 600w, img/app-personnel-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-personnel-1200.jpg" srcset="img/app-personnel-600.jpg 600w, img/app-personnel-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Personnel" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">03</span><h3>Personnel</h3><p>Les employés inscrits, leur rôle, leur horaire et leur statut du jour.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-alertes-390.webp 390w, img/tel-alertes-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-alertes-1200.webp" srcset="img/app-alertes-600.webp 600w, img/app-alertes-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Alertes et journal" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-alertes-390.webp 390w, img/tel-alertes-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-alertes-390.jpg 390w, img/tel-alertes-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-alertes-600.webp 600w, img/app-alertes-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-alertes-1200.jpg" srcset="img/app-alertes-600.jpg 600w, img/app-alertes-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Alertes et journal" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">04</span><h3>Alertes et journal</h3><p>Incidents avec extrait chiffré, réponse du responsable en un clic, seuils qui s&#x27;ajustent, journal de toutes les décisions.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-rapports-390.webp 390w, img/tel-rapports-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-rapports-1200.webp" srcset="img/app-rapports-600.webp 600w, img/app-rapports-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Rapports" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-rapports-390.webp 390w, img/tel-rapports-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-rapports-390.jpg 390w, img/tel-rapports-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-rapports-600.webp 600w, img/app-rapports-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-rapports-1200.jpg" srcset="img/app-rapports-600.jpg 600w, img/app-rapports-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Rapports" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">05</span><h3>Rapports</h3><p>Rapport de présence du jour, de la semaine ou du mois : taux de présence, ponctualité, absences et heures par employé, en version imprimable ou PDF.</p></figcaption></figure><figure class="feature reveal flip"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-parametres-390.webp 390w, img/tel-parametres-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-parametres-1200.webp" srcset="img/app-parametres-600.webp 600w, img/app-parametres-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Paramètres" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-parametres-390.webp 390w, img/tel-parametres-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-parametres-390.jpg 390w, img/tel-parametres-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-parametres-600.webp 600w, img/app-parametres-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-parametres-1200.jpg" srcset="img/app-parametres-600.jpg 600w, img/app-parametres-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Paramètres" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">06</span><h3>Paramètres</h3><p>Noms et zones des caméras, jours et heures de chaque employé, durée de conservation des extraits : chaque modification est vérifiée et journalisée.</p></figcaption></figure><figure class="feature reveal"><div class="shot"><picture>
-<source media="(max-width: 600px)" srcset="img/tel-etat-390.webp 390w, img/tel-etat-780.webp 780w" sizes="280px" width="390" height="844">
-<img src="img/app-etat-1200.webp" srcset="img/app-etat-600.webp 600w, img/app-etat-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Démarrage manuel" width="1200" height="833" loading="lazy" decoding="async"></picture></div>
+<source type="image/webp" media="(max-width: 600px)" srcset="img/tel-etat-390.webp 390w, img/tel-etat-780.webp 780w" sizes="280px">
+<source type="image/jpeg" media="(max-width: 600px)" srcset="img/tel-etat-390.jpg 390w, img/tel-etat-780.jpg 780w" sizes="280px">
+<source type="image/webp" srcset="img/app-etat-600.webp 600w, img/app-etat-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 720px">
+<img src="img/app-etat-1200.jpg" srcset="img/app-etat-600.jpg 600w, img/app-etat-1200.jpg 1200w" sizes="(max-width: 900px) 92vw, 720px" alt="Démarrage manuel" width="1200" height="833" loading="lazy" decoding="async">
+</picture></div>
 <figcaption><span class="num">07</span><h3>Démarrage manuel</h3><p>« lao start » lance la surveillance et le tableau de bord, « lao stop » arrête tout. Rien ne démarre tout seul ; l&#x27;ordinateur reste éveillé seulement pendant le fonctionnement.</p></figcaption></figure>
 </section>
 <section id="mobile" class="sec tint">
   <div class="mobile-head"><div><p class="kicker">Mobile</p><h2>Le tableau de bord tient dans la poche.</h2><p class="sub">Sur téléphone, chaque écran passe en cartes lisibles avec une barre de navigation en bas, de grandes zones tactiles et un thème sombre. Il s&#x27;installe sur l&#x27;écran d&#x27;accueil comme une application.</p></div>
   <ul class="ticks"><li>Barre de navigation en bas</li><li>Tableaux en cartes</li><li>Thème sombre</li><li>Installable sur l&#x27;écran d&#x27;accueil</li></ul></div>
-  <div class="phones"><figure class="phone reveal"><img src="img/tel-aujourdhui-390.webp" srcset="img/tel-aujourdhui-390.webp 390w, img/tel-aujourdhui-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Aujourd&#x27;hui" width="390" height="844" loading="lazy" decoding="async"><figcaption>Aujourd&#x27;hui</figcaption></figure><figure class="phone reveal"><img src="img/tel-presence-390.webp" srcset="img/tel-presence-390.webp 390w, img/tel-presence-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Présence du jour" width="390" height="844" loading="lazy" decoding="async"><figcaption>Présence du jour</figcaption></figure><figure class="phone reveal"><img src="img/tel-alertes-390.webp" srcset="img/tel-alertes-390.webp 390w, img/tel-alertes-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Alertes et journal" width="390" height="844" loading="lazy" decoding="async"><figcaption>Alertes et journal</figcaption></figure><figure class="phone reveal"><img src="img/tel-sombre-390.webp" srcset="img/tel-sombre-390.webp 390w, img/tel-sombre-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Thème sombre" width="390" height="844" loading="lazy" decoding="async"><figcaption>Thème sombre</figcaption></figure></div>
+  <div class="phones"><figure class="phone reveal"><picture>
+<source type="image/webp" srcset="img/tel-aujourdhui-390.webp 390w, img/tel-aujourdhui-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px">
+<img src="img/tel-aujourdhui-390.jpg" srcset="img/tel-aujourdhui-390.jpg 390w, img/tel-aujourdhui-780.jpg 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Aujourd&#x27;hui" width="390" height="844" loading="lazy" decoding="async">
+</picture><figcaption>Aujourd&#x27;hui</figcaption></figure><figure class="phone reveal"><picture>
+<source type="image/webp" srcset="img/tel-presence-390.webp 390w, img/tel-presence-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px">
+<img src="img/tel-presence-390.jpg" srcset="img/tel-presence-390.jpg 390w, img/tel-presence-780.jpg 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Présence du jour" width="390" height="844" loading="lazy" decoding="async">
+</picture><figcaption>Présence du jour</figcaption></figure><figure class="phone reveal"><picture>
+<source type="image/webp" srcset="img/tel-alertes-390.webp 390w, img/tel-alertes-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px">
+<img src="img/tel-alertes-390.jpg" srcset="img/tel-alertes-390.jpg 390w, img/tel-alertes-780.jpg 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Alertes et journal" width="390" height="844" loading="lazy" decoding="async">
+</picture><figcaption>Alertes et journal</figcaption></figure><figure class="phone reveal"><picture>
+<source type="image/webp" srcset="img/tel-sombre-390.webp 390w, img/tel-sombre-780.webp 780w" sizes="(max-width: 600px) 44vw, 240px">
+<img src="img/tel-sombre-390.jpg" srcset="img/tel-sombre-390.jpg 390w, img/tel-sombre-780.jpg 780w" sizes="(max-width: 600px) 44vw, 240px" alt="Thème sombre" width="390" height="844" loading="lazy" decoding="async">
+</picture><figcaption>Thème sombre</figcaption></figure></div>
 </section>
 <section id="impact" class="sec">
   <div class="split"><div><p class="kicker">Impact</p><h2>Pour les bureaux, les PME et le secteur public.</h2></div>
-  <img class="side reveal" src="img/public-880.webp" srcset="img/public-440.webp 440w, img/public-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async"></div>
+  <picture>
+<source type="image/webp" srcset="img/public-440.webp 440w, img/public-880.webp 880w" sizes="(max-width: 900px) 92vw, 440px">
+<img class="side reveal" src="img/public-880.jpg" srcset="img/public-440.jpg 440w, img/public-880.jpg 880w" sizes="(max-width: 900px) 92vw, 440px" width="880" height="663" alt="" loading="lazy" decoding="async">
+</picture></div>
   <ul class="cards three"><li class="card reveal"><h3>Ponctualité</h3><p>Les retards sont visibles le jour même, sans pointeuse ni file d&#x27;attente.</p></li><li class="card reveal"><h3>Paie et RH plus justes</h3><p>Des feuilles de temps objectives et exportables remplacent les cahiers.</p></li><li class="card reveal"><h3>Sécurité utile</h3><p>Les incidents arrivent avec leur extrait vidéo, au lieu d&#x27;heures d&#x27;enregistrement à revoir.</p></li><li class="card reveal"><h3>Souveraineté des données</h3><p>Une solution conçue au Burundi qui garde les données sur place : administrations, banques, écoles, hôpitaux, PME.</p></li><li class="card reveal"><h3>Coût faible</h3><p>Pas d&#x27;abonnement ni de matériel biométrique : on réutilise les caméras existantes.</p></li><li class="card reveal"><h3>Emplois numériques</h3><p>Installation, formation et maintenance par des techniciens locaux.</p></li></ul>
 </section>
 <section id="feuille-de-route" class="sec tint">
