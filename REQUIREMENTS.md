@@ -6,8 +6,8 @@ Hand-over spec for the static showcase (repo `bayhaj1/live-ai-office-site`, GitH
 - Public showcase for the Burundi Ministry of Finance, Budget and Digital Economy talent census (submission 15 Nov 2026;
   national meeting 19 Nov 2026) and for offices / public-sector buyers.
 - Framing: **a local, private security intelligence dashboard** — but every feature shown is **employee-only**: presence now,
-  arrivals and late arrivals, attendance timesheets (day/week, CSV), employees per area, camera health, existing incidents and
-  alerts, and the owner's decision (audit) log. No visitor tracking, no unknown-person alerts, no new detection types.
+  arrivals and late arrivals, attendance timesheets (day/week, CSV), employees per area, camera health, arrivals to confirm
+  on À valider / To review, and the owner's decision log. Employees only: no visitor tracking, no unknown-person alerts, no new detection types.
 - Future security modules appear **only as roadmap**, described as optional modules added to the same modular dashboard.
 
 ## Languages
@@ -20,10 +20,10 @@ Hand-over spec for the static showcase (repo `bayhaj1/live-ai-office-site`, GitH
 3. How it works: architecture diagram (cameras → office computer [detection & tracking, intelligent matching engine, rules,
    encrypted DB] → dashboard; "no cloud"), plus six privacy points (no cloud, encrypted at rest, locked-down access, human in
    control, minimisation, existing hardware).
-4. Features with demo-mode screenshots: Aujourd'hui, Présence (week), Personnel, Alertes + journal, Paramètres, and a phone view.
+4. Features with demo-mode screenshots: Aujourd'hui, Présence (week), Personnel, Rapports, Paramètres, Démarrage, and a phone view. À valider / To review is described in the Today copy and the roadmap (no demo screenshot of that page yet).
 5. Impact for offices, SMEs and the public sector (punctuality, fair payroll/HR, useful security, data sovereignty, low cost,
    local digital jobs).
-6. Roadmap: v1 now; Dec 2026 guided enrolment + one-command start; Q1 2027 pilot, monthly reports, multi-site, roles; Q2 2027
+6. Roadmap: v1 now (including À valider / To review, not Alertes); Dec 2026 guided enrolment + one-command start; Q1 2027 pilot, monthly reports, multi-site, roles; Q2 2027
    optional security modules; then DPIA, certification, rollout.
 7. Contact: WhatsApp +257 64 51 86 62, via a “Contacter sur WhatsApp” / “Contact on WhatsApp” button
    (https://wa.me/25764518662, with a short prefilled message). Show the number in readable form. No name, email or mailto.
