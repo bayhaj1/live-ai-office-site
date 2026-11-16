@@ -25,8 +25,10 @@ Hand-over spec for the static showcase (repo `bayhaj1/live-ai-office-site`, GitH
    local digital jobs).
 6. Roadmap: v1 now; Dec 2026 guided enrolment + one-command start; Q1 2027 pilot, monthly reports, multi-site, roles; Q2 2027
    optional security modules; then DPIA, certification, rollout.
-7. Contact: Alex Nahimana · POPEKI SURL · alex@popeki.com.
-- Footer: © 2026 POPEKI SURL; note that illustrations are AI-generated (fictional people) and screens come from demo mode.
+7. Contact: WhatsApp +257 64 51 86 62, via a “Contacter sur WhatsApp” / “Contact on WhatsApp” button
+   (https://wa.me/25764518662, with a short prefilled message). Show the number in readable form. No name, email or mailto.
+- Footer: © 2026 Live AI Office; “Un produit POPEKI” / “A POPEKI product” linking to https://popeki.com; note that
+  illustrations are AI-generated (fictional people) and screens come from demo mode.
 
 ## Visual design
 - Same Material 3-inspired look as the app (blue primary #2b59c3 / #5b8cff, soft surfaces, rounded 16–28 px cards), modern
